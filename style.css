@@ -1,0 +1,12 @@
+:root {
+    --width: 720px;
+
+    --font-mono: monospace;
+    --font-body: serif;
+
+    --bg: #121212;
+}
+
+body {
+    background-color: var(--bg);
+}
