@@ -33,6 +33,10 @@
     scrollbar-width: thin;
 }
 
+::selection {
+    background: rgba(255, 77, 77, 0.5);
+}
+
 body {
     font-family: var(--font-body);
     font-size: 1.2rem;
@@ -41,8 +45,12 @@ body {
     background-color: var(--bg);
     max-width: var(--width);
     margin: 0 auto;
-    padding: 0 24px;
+    padding: 0 1.5rem;
     overflow-wrap: break-word;
+}
+
+section {
+    padding-top: 1rem;
 }
 
 .title {
@@ -62,7 +70,7 @@ body {
     background-color: var(--accent);
     margin-bottom: 0;
     border: none;
-    margin: 3rem 0 0.5rem 0;
+    margin: 1.5rem 0 0.5rem 0;
 }
 
 h1, h2, h3 {
@@ -100,6 +108,10 @@ a:hover {
     opacity: 0.75;
 }
 
+strong {
+    color: var(--heading-text);
+    font-weight: 600;
+}
 
 small {
     font-size: 0.8em;
