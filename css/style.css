@@ -73,6 +73,27 @@ section {
     margin: 1.5rem 0 0.5rem 0;
 }
 
+.section-row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+}
+
+.section-row-bar {
+    height: 4px;
+    flex: 1;
+    border-top: 4px dashed var(--border);
+}
+
+.section-row-num {
+    color: var(--muted);
+    font-family: var(--font-mono);
+    font-weight: 600px;
+    font-size: 1rem;
+}
+
 h1, h2, h3 {
     font-family: var(--font-mono);
     line-height: 1.33;
