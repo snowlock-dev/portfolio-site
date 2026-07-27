@@ -17,15 +17,18 @@
 :root {
     --width: 720px;
 
-    --font-mono: 'JetBrains Mono', monospace;
-    --font-body: 'Alegreya Sans', serif; /* Top 3 fonts of all time */
+    --font-mono: 'JetBrains Mono', Consolas, "Ubuntu Mono", monospace;
+    --font-body: 'Alegreya Sans', Alegreya, Helvetica, Arial, Sans; /* Top 3 fonts of all time */
 
     --bg: #121212;
     --border: #2d2d3d;
     --heading-text: #e2e6ec;
     --text: #d1d5db;
     --accent: #ff4d4d;
+    --accent-green: #88ffa0;
     --muted: #6b7280;
+    --code-color: #cac0ff;
+    --code-bg: #1c1c1c;
 }
 
 * {
@@ -54,7 +57,7 @@ section {
 }
 
 .title {
-    padding: 80px 0px;
+    padding: 5rem 0 2.5rem 0;
     & h1 { margin-bottom: 0.35em; };
 }
 
@@ -92,6 +95,30 @@ section {
     font-family: var(--font-mono);
     font-weight: 600px;
     font-size: 1rem;
+}
+
+.contact-box {
+    max-width: 90%;
+    margin: 2rem auto;
+}
+
+.terminal-block {
+    font-family: var(--font-mono);
+    color: var(--text);
+    background-color: var(--code-bg);
+    border: 1px solid var(--border);
+    padding: 1.125rem 1.5rem;
+    overflow-x: auto;
+
+    .prompt { color: var(--accent-green); }
+    .cmd { color: var(--heading-text); }
+    .str { color: var(--code-color); text-decoration: none; }
+    .comment { color: var(--muted); }
+}
+
+.code-line {
+    padding: 0.2rem 0.5rem;
+    white-space: nowrap;
 }
 
 h1, h2, h3 {
