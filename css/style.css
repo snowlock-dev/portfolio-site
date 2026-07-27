@@ -117,6 +117,61 @@ ul, ol {
     margin-bottom: 1.5rem;
 }
 
+ul.projects {
+    list-style-type: none;
+    padding: 0;
+    margin: 1.5rem 0 2rem 0;
+}
+
+ul.projects li {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 0;
+    padding: 0.85rem 12px;
+    margin-left: -12px;
+    margin-right: -12px;
+    border-bottom: 2px dashed var(--border);
+    align-items: baseline;
+    transition: background-color 0.2s ease;
+}
+
+
+ul.projects li:hover {
+    background-color: rgba(255, 77, 77, 0.1);
+}
+
+ul.projects li:first-child {
+    border-top: 2px dashed var(--border);
+}
+
+ul.projects li .project-tag {
+    flex: 0 0 90px;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+ul.projects li .project-info {
+    flex: 1;
+    min-width: 0;
+}
+
+ul.projects li .project-info a {
+    font-family: var(--font-mono);
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+ul.projects li .project-info p {
+    font-size: 1rem;
+    color: var(--muted);
+    margin-bottom: 0;
+    margin-top: 0.2rem;
+    line-height: 1.5;
+}
+
 
 a {
     color: var(--accent);
@@ -132,6 +187,11 @@ a:hover {
 strong {
     color: var(--heading-text);
     font-weight: 600;
+}
+
+em {
+    color: var(--muted);
+    font-style: italic;
 }
 
 small {
