@@ -23,7 +23,7 @@
     --bg: #121212;
     --border: #2d2d3d;
     --heading-text: #e2e6ec;
-    --text: #d1d5db;
+    --text: #6f7585;
     --accent: #ff4d4d;
     --accent-green: #88ffa0;
     --muted: #6b7280;
@@ -133,7 +133,7 @@ section {
 .section-row-num {
     color: var(--muted);
     font-family: var(--font-mono);
-    font-weight: 600px;
+    font-weight: 600;
     font-size: 1rem;
 
     user-select: none;
