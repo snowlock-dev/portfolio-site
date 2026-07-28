@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Alegreya Sans';
-    src: url('/portfolio-site/fonts/AlegreyaSans-Regular.woff2') format('woff2');
+    src: url('fonts/AlegreyaSans-Regular.woff2') format('woff2');
     font-weight: 400;
     font-style: normal;
     font-display: block;
@@ -8,7 +8,7 @@
 
 @font-face {
     font-family: 'JetBrains Mono';
-    src: url('/portfolio-site/fonts/JetBrainsMono-VariableFont_wght.woff2') format('woff2');
+    src: url('fonts/JetBrainsMono-VariableFont_wght.woff2') format('woff2');
     font-weight: 400;
     font-style: normal;
     font-display: block;
@@ -60,7 +60,7 @@ body::before {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-image: url('/portfolio-site/stars.svg');
+    background-image: url('res/stars.svg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
