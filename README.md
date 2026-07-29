@@ -7,7 +7,7 @@
 A high-performance, minimalist portfolio focused on speed and simplicity!
 
 
-## Lighthouse Report (Viewing)
+## Lighthouse Report (Viewing) & WAVE
 
 <table>
   <tr>
@@ -26,6 +26,7 @@ A high-performance, minimalist portfolio focused on speed and simplicity!
   </tr>
 </table>
 
+<img src="res/wave_webaim.png" width="250" alt="WAVE webaim score (10/10)">
 
 ## Inspiration && Credits
 
