@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content = "width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta property="og:site_name" content="snowlock -- portfolio">
         <meta property="og:title" content="snowlock -- portfolio">
         <meta property="og:description" content="snowlock-dev's personal site!">
@@ -135,6 +135,13 @@
                     </div>
                 </li>
             </ul>
+
+            <h3>Setup</h3>
+            <p>
+                I use Arch Linux, with either <code>lite-xl</code> or <code>vscodium</code>
+                as editors. Along with that, my game engine of choice is Godot, and my favourite
+                C compiler is <code>gcc</code>!
+            </p>
             </section>
 
             <section class="section-row">
@@ -143,6 +150,14 @@
             </section>
             <section id="now-section">
                 <h2>now</h2>
+
+                <blockquote>
+                    <p>
+                        Computer science is no more about computers than 
+                        astronomy is about telescopes.
+                    </p>
+                    <p><small>-- Edsger Dijkstra</small></p>
+                </blockquote>
 
                 <p>
                     Currently I am learning about cybersecurity, including
@@ -235,25 +250,34 @@
                 const clone = icon.cloneNode(true);
                 track.appendChild(clone);
             });
-    
+        
             let scrollPos = 0;
+            let animationId = null;
+            let isVisible = !document.hidden;
+        
             function scrollCarousel() {
+                if (!isVisible) return;
+
                 scrollPos += 0.6;
                 if (scrollPos >= track.scrollWidth / 2) scrollPos = 0;
                 track.style.transform = `translateX(-${scrollPos}px)`;
-                requestAnimationFrame(scrollCarousel);
+
+                animationId = requestAnimationFrame(scrollCarousel);
             }
+        
+            // Listen for tab switching
+            document.addEventListener("visibilitychange", () => {
+                if (document.hidden) {
+                    isVisible = false;
+                    cancelAnimationFrame(animationId);
+                } else {
+                    isVisible = true;
+                    scrollCarousel();
+                }
+            });
+        
             scrollCarousel();
         }
-
-        const navbar = document.getElementById("navbar");
-        window.addEventListener("scroll", () => {
-            if (window.scrollY > 50) {
-                navbar.classList.add("scrolled");
-            } else {
-                navbar.classList.remove("scrolled");
-            }
-        });
 
         document.querySelectorAll('img[alt]').forEach(img => {
             img.title = img.alt;
