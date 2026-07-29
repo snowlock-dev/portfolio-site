@@ -16,6 +16,11 @@
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:image" content="https://snowlock-dev.github.io/portfolio-site/res/image.png">
 
+        <link rel="icon" type="image/svg+xml" href="res/favicon.svg">
+        <link rel="icon" type="image/x-icon" href="res/favicon.ico">
+
+        <meta name="theme-color" content="#121212">
+
         <meta name="description" content="snowlock-dev's personal site!">
         <title>snowlock -- portfolio</title>
 
@@ -35,6 +40,7 @@
         <nav class="navbar" role="navigation" aria-label="Page Navigation">
             <a href="#about">About</a>
             <a href="#projects">Projects</a>
+            <a href="#now">Now</a>
             <a href="#contact">Contact</a>
         </nav>
 
@@ -58,7 +64,36 @@
                     games and building projects that actually make life easier.
                 </p>
 
-                
+                <p>
+                    Here are some languages & tools I use!:
+                </p>
+
+                <div class="carousel" id="carousel-wrapper">
+                    <div class="carousel-track" id="carousel-track">
+                        <img src="res/icons/arch_linux.png" alt="Arch Linux" loading="lazy">
+                        <img src="res/icons/bash.png" alt="Bash (shell)" loading="lazy">
+                        <img src="res/icons/c.png" alt="C (lang)" loading="lazy">
+                        <img src="res/icons/css.png" alt="CSS" loading="lazy">
+                        <img src="res/icons/git.png" alt="Git" loading="lazy">
+                        <img src="res/icons/go.png" alt="Golang" loading="lazy">
+                        <img src="res/icons/godot.png" alt="Godot Game Engine" loading="lazy">
+                        <img src="res/icons/google_earth_engine.png" alt="Google Earth Engine" loading="lazy">
+                        <img src="res/icons/html.png" alt="HTML" loading="lazy">
+                        <img src="res/icons/javascript.png" alt="Javascript" loading="lazy">
+                        <img src="res/icons/kotlin.png" alt="Kotlin" loading="lazy">
+                        <img src="res/icons/lua.png" alt="Lua" loading="lazy">
+                        <img src="res/icons/pytest.png" alt="Pytest" loading="lazy">
+                        <img src="res/icons/python.png" alt="Python" loading="lazy">
+                        <img src="res/icons/pytorch.png" alt="Pytorch" loading="lazy">
+                        <img src="res/icons/raspberri_pi.png" alt="Raspberry Pi" loading="lazy">
+                        <img src="res/icons/ruby.png" alt="Ruby (lang)" loading="lazy">
+                        <img src="res/icons/vim.png" alt="Vim" loading="lazy">
+                        <img src="res/icons/vscodium.png" alt="VScodium (open source vscode)" loading="lazy">
+                        <img src="res/icons/webassembly.png" alt="WA (webassembly)" loading="lazy">
+                    </div>
+                </div>
+
+
             </section>
 
             <section class="section-row">
@@ -80,7 +115,7 @@
                 <li>
                     <span class="project-tag">001</span>
                     <div class="project-info">
-                        <a href="https://github.com/snowlock-dev/pyScan">pyScan</a>
+                        <a href="https://github.com/snowlock-dev/pyScan" target="_blank" rel="noopener noreferrer">pyScan</a>
                         <p>
                             A lightweight & fast concurrent TCP port scanner
                             built in python, using socket. Also features 
@@ -91,7 +126,7 @@
                 <li>
                     <span class="project-tag">002</span>
                     <div class="project-info">
-                        <a href="https://github.com/snowlock-dev/ocelot-css">ocelot-css</a>
+                        <a href="https://github.com/snowlock-dev/ocelot-css" target="_blank" rel="noopener noreferrer">ocelot-css</a>
                         <p>
                             A dark color scheme used by this website, and by my 
                             blog. Designed for better reading conditions (medium 
@@ -103,7 +138,28 @@
             </section>
 
             <section class="section-row">
-                <span id="contact" class="section-row-num">003</span>
+                <span id="now" class="section-row-num">003</span>
+                <div class="section-row-bar"></div>
+            </section>
+            <section id="now-section">
+                <h2>now</h2>
+
+                <p>
+                    Currently I am learning about cybersecurity, including
+                    portswigger labs, and actually making tools helping in 
+                    defense. The first one I've made is pyScan, and I hope 
+                    to still improve it, till it becomes a good enough tool
+                </p>
+
+                <p>
+                    On the gamedev side, I do hope to continue making small
+                    games here and there, and also, to upload all of my previous 
+                    games on <code>itch.io</code> for archive purposes!
+                </p>
+            </section>
+
+            <section class="section-row">
+                <span id="contact" class="section-row-num">004</span>
                 <div class="section-row-bar"></div>
             </section>
             <section id="contact-section">
@@ -169,5 +225,40 @@
 
     </body>
 
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+    
+        const track = document.getElementById("carousel-track");
+        if (track) {
+            const icons = Array.from(track.children);
+            icons.forEach(icon => {
+                const clone = icon.cloneNode(true);
+                track.appendChild(clone);
+            });
+    
+            let scrollPos = 0;
+            function scrollCarousel() {
+                scrollPos += 0.6;
+                if (scrollPos >= track.scrollWidth / 2) scrollPos = 0;
+                track.style.transform = `translateX(-${scrollPos}px)`;
+                requestAnimationFrame(scrollCarousel);
+            }
+            scrollCarousel();
+        }
+
+        const navbar = document.getElementById("navbar");
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add("scrolled");
+            } else {
+                navbar.classList.remove("scrolled");
+            }
+        });
+
+        document.querySelectorAll('img[alt]').forEach(img => {
+            img.title = img.alt;
+        });
+        });
+    </script>
 
 </html>

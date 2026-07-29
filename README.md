@@ -1,14 +1,11 @@
-# Snowlock's Site
+# Portfolio
 
 <img src="res/image.png" width="640" alt="portfolio site screenshot">
 
 ---
 
-A WIP high-performance, minimalist portfolio focused on speed and simplicity!
+A high-performance, minimalist portfolio focused on speed and simplicity!
 
-Currently is in a unfinished state.
-
-Background stars pattern from: [nnnoise](https://www.fffuel.co/nnnoise/)
 
 ## Lighthouse Report (Viewing)
 
@@ -16,22 +13,26 @@ Background stars pattern from: [nnnoise](https://www.fffuel.co/nnnoise/)
   <tr>
     <td align="center">
       <img src="res/lighthouse_desktop.gif" width="250" alt="Lighthouse score @ desktop (100)">
-      <p>Mobile
-      <em>(consistent >95)</em>
+      <p>Desktop
+      <em>(consistent 99-100 TOTAL)</em>
       </p>
     </td>
     <td align="center">
       <img src="res/lighthouse_mobile.gif" width="250" alt="Lighthouse score @ mobile (100 too)">
-      <p>Desktop
-      <em>(consistent 99-100)</em>
+      <p>Mobile
+      <em>(consistent >95 TOTAL)</em>
       </p>
     </td>
   </tr>
 </table>
 
 
-## Inspiration
+## Inspiration && Credits
 
-This site was inspired by a few other sites:
+This site was inspired by: [rexim's site](rexim.github.io)
 
-* [rexim](rexim.github.io)
+Background stars pattern from: [nnnoise](https://www.fffuel.co/nnnoise/)
+
+Icons for the carousel by: [marwin1991/profile-technology-icons](https://github.com/marwin1991/profile-technology-icons/tree/main/icons)
+
+Favicon by: [FaviconGenerator](https://favicongenerator.io/#text)
